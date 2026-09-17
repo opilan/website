@@ -1,0 +1,127 @@
+:root {
+  --leather-dark: #241812;
+  --leather: #3d2a1e;
+  --leather-light: #6b4a34;
+  --tan: #a9793f;
+  --ink: #211a15;
+  --muted: #6f6259;
+  --hairline: rgba(33, 26, 21, 0.12);
+  --serif: "Cormorant Garamond", "Times New Roman", serif;
+  --body: "EB Garamond", Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--body);
+  color: var(--ink);
+  background: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+/* subtle paper-grain texture over the white background */
+.grain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode: multiply;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 640px;
+  padding: 48px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 56px;
+}
+
+.brand {
+  display: flex;
+  justify-content: center;
+}
+
+.brand__logo {
+  width: min(340px, 70vw);
+  height: auto;
+}
+
+.hero__eyebrow {
+  margin: 0 0 18px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  color: var(--tan);
+}
+
+.hero__title {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.15;
+  margin: 0 0 22px;
+  color: var(--ink);
+}
+
+.hero__text {
+  margin: 0 auto;
+  max-width: 480px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer__social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  max-width: 480px;
+}
+
+.footer__social a {
+  display: inline-flex;
+  color: var(--muted);
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer__social a:hover {
+  color: var(--tan);
+  transform: translateY(-1px);
+}
+
+.footer__social svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.footer__copy {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
