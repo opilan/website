@@ -114,6 +114,14 @@ body {
   transform: translateY(-1px);
 }
 
+.footer__social a.footer__social-link--linkedin:hover { color: #0a66c2; }
+.footer__social a.footer__social-link--x:hover { color: #000000; }
+.footer__social a.footer__social-link--youtube:hover { color: #ff0000; }
+.footer__social a.footer__social-link--pinterest:hover { color: #e60023; }
+.footer__social a.footer__social-link--facebook:hover { color: #1877f2; }
+.footer__social a.footer__social-link--instagram:hover { color: #e1306c; }
+.footer__social a.footer__social-link--tiktok:hover { color: #fe2c55; }
+
 .footer__social svg {
   width: 18px;
   height: 18px;
